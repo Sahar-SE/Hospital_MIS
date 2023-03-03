@@ -7,7 +7,7 @@ class CreatePatients < ActiveRecord::Migration[7.0]
       t.date :dof_exit
       t.string :address
       t.decimal :phone
-      t.room :varchar
+      t.integer :bed
 
       t.timestamps
     end
