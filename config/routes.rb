@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   get 'doctors/index'
   get 'beds/index'
-  get 'Apointments/index'
+  get 'apointments/index'
 end
