@@ -60,7 +60,7 @@ class BedsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bed
-      @bed = Bed.find(params[:id])
+      # @bed = Bed.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
