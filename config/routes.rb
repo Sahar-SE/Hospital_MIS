@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get 'doctors/index'
   get 'beds/index'
   get 'apointments/index'
+  get 'patients/index'
 end

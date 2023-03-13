@@ -60,7 +60,7 @@ class PatientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_patient
-      @patient = Patient.find(params[:id])
+      # @patient = Patient.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
