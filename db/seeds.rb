@@ -21,3 +21,8 @@ patients = Patient.create(
    phone: 123456778,
    #bed: 1
 )
+
+beds = Bed.create(
+   number: 3,
+   is_reseved: false
+)
