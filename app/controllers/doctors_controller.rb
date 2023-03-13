@@ -8,6 +8,7 @@ class DoctorsController < ApplicationController
 
   # GET /doctors/1 or /doctors/1.json
   def show
+    @doctor = Doctor.find(params[:id])
   end
 
   # GET /doctors/new
