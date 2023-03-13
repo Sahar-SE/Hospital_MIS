@@ -26,3 +26,10 @@ beds = Bed.create(
    number: 3,
    is_reseved: false
 )
+
+appointments = Appointment.create(
+   date: "2023-03-01",
+   time: "10:00",
+   doctor_id: 1,
+   patient_id: 1
+)
