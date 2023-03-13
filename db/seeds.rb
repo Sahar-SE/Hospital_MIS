@@ -12,3 +12,12 @@ doctors = Doctor.create(
    phone: 123456789
    )
 
+patients = Patient.create(
+   name: "Mohamed Mohamedi",
+   disease: "Cancer",
+   dof_enterance: "2001-03-01",
+   dof_exit: "blank",
+   address: "Concord, CA",
+   phone: 123456778,
+   #bed: 1
+)
