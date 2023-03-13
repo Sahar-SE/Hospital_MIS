@@ -28,8 +28,10 @@ beds = Bed.create(
 )
 
 appointments = Appointment.create(
-   date: "2023-03-01",
-   time: "10:00",
-   doctor_id: 1,
-   patient_id: 1
+   app_date: "2023-03-01",
+   #time: "10:00",
+   #doctor_id: 1,
+   #patient_id: 1
+   p_name: "Mohamed Mohamedi",
+   d_name: "Ahmad Ahmadi"
 )
