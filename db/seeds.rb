@@ -3,5 +3,12 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+
+doctors = Doctor.create(
+   name: "Ahmad Ahmadi",
+   bio: "I'm Ahmad Ahmadi graduated from Cairo University. has 3 years of experience at the hospital. I'm a cardiologist",
+   field: "Cardiology",
+   address: "Cairo, Egypt",
+   phone: 123456789
+   )
+
