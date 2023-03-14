@@ -10,7 +10,8 @@ doctors = Doctor.create(
    field: "Cardiology",
    address: "Cairo, Egypt",
    phone: 123456789
-   )
+)
+
 
 patients = Patient.create(
    name: "Mohamed Mohamedi",
@@ -35,3 +36,5 @@ appointments = Appointment.create(
    p_name: "Mohamed Mohamedi",
    d_name: "Ahmad Ahmadi"
 )
+
+
