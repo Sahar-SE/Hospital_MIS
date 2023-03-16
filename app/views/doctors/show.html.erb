@@ -27,6 +27,11 @@
   </p>
   <% if @doctor.profile_image.attached? %>
     <%= image_tag @doctor.profile_image %>
+
+    <p>
+      <strong>Resume:</strong>
+      <%= @doctor.document %>
+    </p>
   <% end %>
 </div>
 <div>
