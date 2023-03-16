@@ -17,13 +17,18 @@
   </div>
 
   <div>
+    <%= form.label :profile_image, style: "display: block" %>
+    <%= form.file_field :profile_image %>
+  </div>
+
+  <div>
     <%= form.label :bio, style: "display: block" %>
     <%= form.text_area :bio %>
   </div>
 
   <div>
-    <%= form.label :field, style: "display: block" %>
-    <%= form.text_field :field %>
+    <%= form.label :speciality, style: "display: block" %>
+    <%= form.text_field :speciality %>
   </div>
 
   <div>
