@@ -16,6 +16,11 @@
     <%= form.text_field :name %>
   </div>
 
+   <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
   <div>
     <%= form.label :profile_image, style: "display: block" %>
     <%= form.file_field :profile_image %>
@@ -24,6 +29,11 @@
   <div>
     <%= form.label :bio, style: "display: block" %>
     <%= form.text_area :bio %>
+  </div>
+
+  <div>
+    <%= form.label :document, style: "display: block" %>
+    <%= form.file_field :document %>
   </div>
 
   <div>
