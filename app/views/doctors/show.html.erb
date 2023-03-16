@@ -25,6 +25,9 @@
     <strong>Phone:</strong>
     <%= @doctor.phone %>
   </p>
+  <% if @doctor.profile_image.attached? %>
+    <%= image_tag @doctor.profile_image %>
+  <% end %>
 </div>
 <div>
   <h1>This is Doctors Page</h1>
