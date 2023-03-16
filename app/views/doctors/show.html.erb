@@ -17,7 +17,7 @@
   </p>
 
   <p>
-    <strong>Field:</strong>
+    <strong>Speciality:</strong>
     <%= @doctor.speciality %>
   </p>
 
@@ -31,11 +31,10 @@
     <%= @doctor.phone %>
   </p>
   <% if @doctor.profile_image.attached? %>
-    <%= image_tag @doctor.profile_image %>
-
+    <%= image_tag @doctor.profile_image, style: "width: 290px" %>
     <p>
       <strong>Resume:</strong>
-      <%=file_tag @doctor.document %>
+      <%= @doctor.documents %>
     </p>
   <% end %>
 </div>
