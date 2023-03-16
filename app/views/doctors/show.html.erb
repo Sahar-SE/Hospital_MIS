@@ -1,13 +1,35 @@
 <p style="color: green"><%= notice %></p>
 
-<%# <%= render @doctor %>
+<div id="doctors">
+  <p>
+    <strong>Name:</strong>
+    <%= @doctor.name %>
+  </p>
 
+  <p>
+    <strong>Bio:</strong>
+    <%= @doctor.bio %>
+  </p>
+
+  <p>
+    <strong>Field:</strong>
+    <%= @doctor.speciality %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @doctor.address %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @doctor.phone %>
+  </p>
+</div>
 <div>
   <h1>This is Doctors Page</h1>
-  <%# <%= link_to "Edit this doctor", edit_doctor_path(@doctor) %> |
+ <%= link_to "Edit this doctor", edit_doctor_path(@doctor) %> |
   <%= link_to "Back to doctors", doctors_path %> 
 
-  <%= button_to "Destroy this doctor", @doctor, method: :delete %> 
-
-  
+  <%= button_to "Destroy this doctor", @doctor, method: :delete %>  
 </div>
