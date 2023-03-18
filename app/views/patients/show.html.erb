@@ -10,6 +10,10 @@
     <%= @patient.name %>
   </p>
 
+  <% if @patient.profile_image.attached?%>
+  <%= image_tag @patient.profile_image :style "width: 40px" %>
+  <% end %>
+
   <p>
     <strong>Email:</strong>
     <%= @patient.email %>
@@ -39,6 +43,12 @@
     <strong>Phone:</strong>
     <%= @patient.phone %>
   </p>
+
+  <p>
+    <strong>Documents:</strong>
+    <%= @patient.documents %>
+  </p>
+
   </div>
 
   <%# <%= link_to "Edit this patient", edit_patient_path(@patient) %> |
