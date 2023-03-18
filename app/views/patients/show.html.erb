@@ -3,42 +3,44 @@
 <%# <%= render @patient %>
 
 <div>
+<div id="patients">
   <h1>Patient Page</h1>
   <p>
     <strong>Name:</strong>
-    <%= patient.name %>
+    <%= @patient.name %>
   </p>
 
   <p>
     <strong>Email:</strong>
-    <%= patient.email %>
+    <%= @patient.email %>
   </p>
 
   <p>
     <strong>Disease:</strong>
-    <%= patient.disease %>
+    <%= @patient.disease %>
   </p>
 
   <p>
     <strong>Dof enterance:</strong>
-    <%= patient.dof_enterance %>
+    <%= @patient.dof_enterance %>
   </p>
 
   <p>
     <strong>Dof exit:</strong>
-    <%= patient.dof_exit %>
+    <%= @patient.dof_exit %>
   </p>
 
   <p>
     <strong>Address:</strong>
-    <%= patient.address %>
+    <%= @patient.address %>
   </p>
 
   <p>
     <strong>Phone:</strong>
-    <%= patient.phone %>
+    <%= @patient.phone %>
   </p>
-  
+  </div>
+
   <%# <%= link_to "Edit this patient", edit_patient_path(@patient) %> |
   <%= link_to "Back to patients", patients_path %>
 
