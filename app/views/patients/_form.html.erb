@@ -23,7 +23,7 @@
 
    <div>
     <%= form.label :profile_image, style: "display: block" %>
-    <%= form.text_field :profile_image %>
+    <%= form.file_field :profile_image %>
   </div>
 
    <div>
@@ -37,12 +37,12 @@
   </div>
 
   <div>
-    <%= form.label :dof_enterance, style: "display: block" %>
+    <%= form.label :"Date Of Enterance", style: "display: block" %>
     <%= form.date_field :dof_enterance %>
   </div>
 
   <div>
-    <%= form.label :dof_exit, style: "display: block" %>
+    <%= form.label :"Date Of Exit", style: "display: block" %>
     <%= form.date_field :dof_exit %>
   </div>
 
