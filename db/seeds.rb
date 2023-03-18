@@ -7,7 +7,7 @@
 doctors = Doctor.create(
    name: "Ahmad Ahmadi",
    bio: "I'm Ahmad Ahmadi graduated from Cairo University. has 3 years of experience at the hospital. I'm a cardiologist",
-   field: "Cardiology",
+   speciality: "Cardiology",
    address: "Cairo, Egypt",
    phone: 123456789
 )
@@ -20,7 +20,7 @@ patients = Patient.create(
    dof_exit: "blank",
    address: "Concord, CA",
    phone: 123456778,
-   #bed: 1
+   # bed: 1
 )
 
 beds = Bed.create(
@@ -30,7 +30,7 @@ beds = Bed.create(
 
 appointments = Appointment.create(
    app_date: "2023-03-01",
-   #time: "10:00",
+   time: "10:00",
    #doctor_id: 1,
    #patient_id: 1
    p_name: "Mohamed Mohamedi",
