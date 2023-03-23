@@ -37,6 +37,7 @@ class AppointmentsController < ApplicationController
 
   # PATCH/PUT /appointments/1 or /appointments/1.json
   def update
+    @appointment = Appointment.find(params[:id])
     respond_to do |format|
       if @appointment.update(appointment_params)
         format.html { redirect_to appointment_url(@appointment), notice: "Appointment was successfully updated." }
