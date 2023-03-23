@@ -17,6 +17,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
+    @appointment = Appointment.find(params[:id])
   end
 
   # POST /appointments or /appointments.json
