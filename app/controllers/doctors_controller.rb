@@ -39,6 +39,7 @@ class DoctorsController < ApplicationController
   # PATCH/PUT /doctors/1 or /doctors/1.json
   def update
     @doctor = Doctor.find(params[:id])
+    @doctor.update(doctor_params)
     respond_to do |format|
       if @doctor.update(doctor_params)
         format.html { redirect_to doctor_url(@doctor), notice: "Doctor was successfully updated." }
