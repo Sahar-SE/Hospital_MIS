@@ -51,6 +51,7 @@ class AppointmentsController < ApplicationController
 
   # DELETE /appointments/1 or /appointments/1.json
   def destroy
+    @appointment = Appointment.find(params[:id])
     @appointment.destroy
 
     respond_to do |format|
