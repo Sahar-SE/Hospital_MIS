@@ -49,6 +49,7 @@ class BedsController < ApplicationController
 
   # DELETE /beds/1 or /beds/1.json
   def destroy
+    @bed = Bed.find(params[:id])
     @bed.destroy
 
     respond_to do |format|
