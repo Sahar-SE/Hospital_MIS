@@ -52,6 +52,7 @@ class DoctorsController < ApplicationController
 
   # DELETE /doctors/1 or /doctors/1.json
   def destroy
+    @doctor = Doctor.find(params[:id])
     @doctor.destroy
 
     respond_to do |format|
