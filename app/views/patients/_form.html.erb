@@ -1,3 +1,4 @@
+<div class="wrapper">
 <%= form_with(model: patient) do |form| %>
   <% if patient.errors.any? %>
     <div style="color: red">
@@ -60,3 +61,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
