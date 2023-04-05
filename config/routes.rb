@@ -7,8 +7,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "indexes#index"
-  # get 'doctors/index'
-  # get 'beds/index'
-  # get 'apointments/index'
-  # get 'patients/index'
+
 end
