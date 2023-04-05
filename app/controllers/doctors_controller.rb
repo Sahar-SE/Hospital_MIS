@@ -1,5 +1,5 @@
 class DoctorsController < ApplicationController
-  before_action :set_doctor, only: %i[ show edit update destroy ]
+  before_action :set_doctor, only: %i[ doctor_params ]
 
   # GET /doctors or /doctors.json
   def index
@@ -8,7 +8,6 @@ class DoctorsController < ApplicationController
 
   # GET /doctors/1 or /doctors/1.json
   def show
-    @doctor = Doctor.find(params[:id])
   end
 
   # GET /doctors/new
@@ -18,7 +17,6 @@ class DoctorsController < ApplicationController
 
   # GET /doctors/1/edit
   def edit
-    @doctor = Doctor.find(params[:id])
   end
 
   # POST /doctors or /doctors.json
@@ -38,7 +36,6 @@ class DoctorsController < ApplicationController
 
   # PATCH/PUT /doctors/1 or /doctors/1.json
   def update
-    @doctor = Doctor.find(params[:id])
     respond_to do |format|
       if @doctor.update(doctor_params)
         format.html { redirect_to doctor_url(@doctor), notice: "Doctor was successfully updated." }
@@ -52,7 +49,6 @@ class DoctorsController < ApplicationController
 
   # DELETE /doctors/1 or /doctors/1.json
   def destroy
-    @doctor = Doctor.find(params[:id])
     @doctor.destroy
 
     respond_to do |format|
@@ -64,7 +60,7 @@ class DoctorsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_doctor
-      # @doctor = Doctor.find(params[:id])
+      @doctor = Doctor.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
