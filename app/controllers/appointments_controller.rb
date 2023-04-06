@@ -51,7 +51,6 @@ class AppointmentsController < ApplicationController
 
   # DELETE /appointments/1 or /appointments/1.json
   def destroy
-    @appointment = Appointment.find(params[:id])
     @appointment.destroy
 
     respond_to do |format|
@@ -63,7 +62,7 @@ class AppointmentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_appointment
-      # @appointment = Appointment.find(params[:id])
+      @appointment = Appointment.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
