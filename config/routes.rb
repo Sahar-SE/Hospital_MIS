@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resources :beds
   resources :patients
   resources :doctors
+
+  namespace :admin do
+    
+  end
 end
