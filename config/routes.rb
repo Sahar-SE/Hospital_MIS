@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :doctors
 
   namespace :admin do
-    
+    resources :doctors
   end
 end
