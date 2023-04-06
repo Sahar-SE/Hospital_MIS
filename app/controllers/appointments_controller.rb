@@ -17,7 +17,6 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
-    @appointment = Appointment.find(params[:id])
   end
 
   # POST /appointments or /appointments.json
@@ -37,7 +36,6 @@ class AppointmentsController < ApplicationController
 
   # PATCH/PUT /appointments/1 or /appointments/1.json
   def update
-    @appointment = Appointment.find(params[:id])
     respond_to do |format|
       if @appointment.update(appointment_params)
         format.html { redirect_to appointment_url(@appointment), notice: "Appointment was successfully updated." }
@@ -51,7 +49,6 @@ class AppointmentsController < ApplicationController
 
   # DELETE /appointments/1 or /appointments/1.json
   def destroy
-    @appointment = Appointment.find(params[:id])
     @appointment.destroy
 
     respond_to do |format|
@@ -63,7 +60,7 @@ class AppointmentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_appointment
-      # @appointment = Appointment.find(params[:id])
+      @appointment = Appointment.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

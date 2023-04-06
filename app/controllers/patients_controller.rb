@@ -8,7 +8,6 @@ class PatientsController < ApplicationController
 
   # GET /patients/1 or /patients/1.json
   def show
-    @patient = Patient.find(params[:id])
   end
 
   # GET /patients/new
@@ -18,7 +17,6 @@ class PatientsController < ApplicationController
 
   # GET /patients/1/edit
   def edit
-    @patient = Patient.find(params[:id])
   end
 
   # POST /patients or /patients.json
@@ -38,7 +36,6 @@ class PatientsController < ApplicationController
 
   # PATCH/PUT /patients/1 or /patients/1.json
   def update
-    @patient = Patient.find(params[:id])
     respond_to do |format|
       if @patient.update(patient_params)
         format.html { redirect_to patient_url(@patient), notice: "Patient was successfully updated." }
@@ -52,7 +49,6 @@ class PatientsController < ApplicationController
 
   # DELETE /patients/1 or /patients/1.json
   def destroy
-    @patient = Patient.find(params[:id])
     @patient.destroy
 
     respond_to do |format|
@@ -64,7 +60,7 @@ class PatientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_patient
-      # @patient = Patient.find(params[:id])
+      @patient = Patient.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
