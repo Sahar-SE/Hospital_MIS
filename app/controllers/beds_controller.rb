@@ -47,25 +47,24 @@ class BedsController < ApplicationController
     end
   end
 
-  # DELETE /beds/1 or /beds/1.json
-  def destroy
-    @bed = Bed.find(params[:id])
-    @bed.destroy
+# DELETE /beds/1 or /beds/1.json
+def destroy
+  @bed.destroy
 
-    respond_to do |format|
-      format.html { redirect_to beds_url, notice: "Bed was successfully destroyed." }
-      format.json { head :no_content }
-    end
+  respond_to do |format|
+    format.html { redirect_to beds_url, notice: "Bed was successfully destroyed." }
+    format.json { head :no_content }
+  end
+end
+
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_bed
+    @bed = Bed.find(params[:id])
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_bed
-      # @bed = Bed.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def bed_params
-      params.require(:bed).permit(:number, :is_reseved)
-    end
+# Only allow a list of trusted parameters through.
+  def bed_params
+    params.require(:bed).permit(:number, :is_reseved)
+  end
 end
