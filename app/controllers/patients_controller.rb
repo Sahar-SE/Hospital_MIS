@@ -18,7 +18,6 @@ class PatientsController < ApplicationController
 
   # GET /patients/1/edit
   def edit
-    @patient = Patient.find(params[:id])
   end
 
   # POST /patients or /patients.json
