@@ -38,7 +38,6 @@ class PatientsController < ApplicationController
 
   # PATCH/PUT /patients/1 or /patients/1.json
   def update
-    @patient = Patient.find(params[:id])
     respond_to do |format|
       if @patient.update(patient_params)
         format.html { redirect_to patient_url(@patient), notice: "Patient was successfully updated." }
@@ -52,7 +51,6 @@ class PatientsController < ApplicationController
 
   # DELETE /patients/1 or /patients/1.json
   def destroy
-
     @patient.destroy
 
     respond_to do |format|
