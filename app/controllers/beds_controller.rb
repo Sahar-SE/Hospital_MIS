@@ -50,7 +50,6 @@ class BedsController < ApplicationController
 # DELETE /beds/1 or /beds/1.json
 def destroy
   @bed.destroy
-
   respond_to do |format|
     format.html { redirect_to beds_url, notice: "Bed was successfully destroyed." }
     format.json { head :no_content }
