@@ -10,10 +10,14 @@
     "esbuild": "^0.17.10",
     "jquery": "^3.6.4",
     "popper.js": "^1.16.1",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
     "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "3"
   }
 }
