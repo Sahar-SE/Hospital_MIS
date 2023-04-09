@@ -1,49 +1,9 @@
 
 
-nav h2{
-  position: absolute;
-  top:5%;
-  left: 5%;
-  opacity: 0;
-  pointer-events: none;
-  color: #fff;
-  font-size: 2em;
-}
-
-nav .close div::before,
-nav .close div::after{
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 4px;
-  background: #fff;
-  transition: background .5s ease;
-}
-nav .close div::before{
-  transform: rotate(-45deg);
-}
-
-nav .close div::after{
-  transform: rotate(45deg);
-}
-
-nav .close:hover div::before,
-nav .close:hover div::after{
-  background: rgb(209, 3, 3);
-}
-
-@media (max-width: 992px){
-  h1{
-    font-size: 25px;
-  }
-}
-    </style>
-
   <nav>
     <ul>
-      <li><%= link_to "Doctors", doctors_path %>
-      </li>
-      <li><a href="#">About</a></li>
+      <li><%= link_to "Doctors", doctors_path %></li>
+      <li><%= link_to "Patients", patients_path %></li>
       <li><a href="#">Projects</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
