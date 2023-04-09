@@ -1,38 +1,5 @@
 
 
-nav ul {
-  list-style: none;
-}
-
-nav ul li{
-  margin: 50px 0;
-}
-
-nav ul li a{
-  color: #fafafa;
-  font-size: 2em;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  opacity: 0;
-  pointer-events: none;
-}
-
-nav ul li a:after{
-  content: '';
-  width: 100%;
-  position: absolute;
-  height: 3px;
-  border-radius: 5px;
-  background: #fff;
-  bottom: -10px;
-  left: 0;
-  transform-origin: left;
-  transition: transform .5s ease;
-  transform: scaleX(0);
-}
-
-
 nav ul li a:hover:after{
   transform: scaleX(1);
 }
