@@ -1,11 +1,9 @@
-
-
-  <nav>
-    <ul>
-      <li><%= link_to "Doctors", doctors_path %></li>
-      <li><%= link_to "Patients", patients_path %></li>
-      <li><%= link_to "Appointments", appointments_path %></li>
-      <li><a href="#">Contact</a></li>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <ul class="navbar-nav">
+      <li class="nav-item"><%= link_to "Doctors", doctors_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to "Patients", patients_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to "Appointments", appointments_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to "Beds", beds_path, class: 'nav-link' %></li>
     </ul>
 
 <div class="menu-icon">
@@ -13,27 +11,4 @@
   <span class="menu-icon__line"></span>
   <span class="menu-icon__line menu-icon__line-right"></span>
 </div>
-
-  </nav>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-
-  <script>
-    const open = document.querySelector('.container');
-    const close = document.querySelector('.close');
-    var tl = gsap.timeline({ defaults: { duration: 1, ease: 'expo.inOut' } });
-    open.addEventListener('click', () => {
-      if (tl.reversed()) {
-        tl.play();
-      } else {
-        tl.to('nav', { right: 0 })
-          .to('nav', { height: '100vh' }, '-=.1')
-          .to('nav ul li a', { opacity: 1, pointerEvents: 'all', stagger: .2 }, '-=.8')
-          .to('.close', { opacity: 1, pointerEvents: 'all' }, "-=.8")
-          .to('nav h2', { opacity: 1 }, '-=1');
-      }
-    });
-
-    close.addEventListener('click', () => {
-      tl.reverse();
-    });
-  </script>
+</nav>
