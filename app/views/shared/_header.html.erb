@@ -1,14 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <ul class="navbar-nav">
+      <li class="nav-item"><%= link_to "Home", "/", class: 'nav-link' %></li>
       <li class="nav-item"><%= link_to "Doctors", doctors_path, class: 'nav-link' %></li>
       <li class="nav-item"><%= link_to "Patients", patients_path, class: 'nav-link' %></li>
       <li class="nav-item"><%= link_to "Appointments", appointments_path, class: 'nav-link' %></li>
       <li class="nav-item"><%= link_to "Beds", beds_path, class: 'nav-link' %></li>
     </ul>
-
-<div class="menu-icon">
-  <span class="menu-icon__line menu-icon__line-left"></span>
-  <span class="menu-icon__line"></span>
-  <span class="menu-icon__line menu-icon__line-right"></span>
-</div>
 </nav>
