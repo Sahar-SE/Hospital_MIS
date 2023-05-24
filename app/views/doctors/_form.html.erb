@@ -12,48 +12,52 @@
     </div>
   <% end %>
 
-  <div class="">
-    <div class=""><%= form.label :name, style: "display: block" %></div>
-    <%= form.text_field :name %>
-  </div>
+<div class="bg-success p-5 row text-light">
+  <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: 'form-control' %>
+      </div>
 
-   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
+      <div class="form-group">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: 'form-control' %>
+      </div>
 
-  <div>
-    <%= form.label :profile_image, style: "display: block" %>
-    <%= form.file_field :profile_image %>
-  </div>
+    <div class="form-group">
+      <%= form.label :speciality %>
+      <%= form.text_field :speciality, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.label :bio, style: "display: block" %>
-    <%= form.text_area :bio %>
-  </div>
+      <div class="form-group">
+        <%= form.label :bio %>
+        <%= form.text_area :bio, class: 'col-12 h-7' %>
+      </div>
+    </div>
+  <div class="col-md-6 col-sm-12">
+    <div class="form-group">
+      <%= form.label :document %>
+      <%= form.file_field :document, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.label :document, style: "display: block" %>
-    <%= form.file_field :document %>
-  </div>
+    <div class="form-group">
+        <%= form.label :profile_image %>
+        <%= form.file_field :profile_image, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.label :speciality, style: "display: block" %>
-    <%= form.text_field :speciality %>
-  </div>
+    <div class="form-group">
+      <%= form.label :address %>
+      <%= form.text_field :address, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.label :address, style: "display: block" %>
-    <%= form.text_field :address %>
-  </div>
+    <div class="form-group">
+      <%= form.label :phone %>
+      <%= form.text_field :phone, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <div class="btn btn-md btn-warning mt-4 col-12">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
 </div>
