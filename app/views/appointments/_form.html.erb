@@ -1,3 +1,4 @@
+<div class="wrapper">
 <%= form_with(model: appointment) do |form| %>
   <% if appointment.errors.any? %>
     <div style="color: red">
@@ -11,22 +12,26 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :p_name, style: "display: block" %>
-    <%= form.text_field :p_name %>
-  </div>
+<div class="bg-success p-5 row text-light">
+    <div>
+      <%= form.label :"Patient Name" %>
+      <%= form.text_field :p_name, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.label :d_name, style: "display: block" %>
-    <%= form.text_field :d_name %>
-  </div>
+    <div>
+      <%= form.label :"Doctor Name" %>
+      <%= form.text_field :d_name, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.label :app_date, style: "display: block" %>
-    <%= form.date_field :app_date %>
-  </div>
+    <div>
+      <%= form.label :"Appointment Date" %>
+      <%= form.date_field :app_date, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div  class="btn btn-warning mt-4 col-4 offset-4">
+      <%= form.submit %>
+    </div>
+  <% end %>
   </div>
-<% end %>
+</div>
+</div>
