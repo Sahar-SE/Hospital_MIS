@@ -1,9 +1,11 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <ul class="navbar-nav">
-      <li class="nav-item"><%= link_to "Home", "/", class: 'nav-link' %></li>
-      <li class="nav-item"><%= link_to "Doctors", doctors_path, class: 'nav-link' %></li>
-      <li class="nav-item"><%= link_to "Patients", patients_path, class: 'nav-link' %></li>
-      <li class="nav-item"><%= link_to "Appointments", appointments_path, class: 'nav-link' %></li>
-      <li class="nav-item"><%= link_to "Beds", beds_path, class: 'nav-link' %></li>
-    </ul>
+<div class="row">
+<nav class="col-12 navbar navbar-expand-md bg-success">
+  <ul class="navbar-nav col-5 offset-4">
+    <li class="nav-item"><%= link_to "Home", "/", class: 'nav-link p-3 text-light' %></li>
+    <li class="nav-item"><%= link_to "Doctors", doctors_path, class: 'nav-link p-3 text-light' %></li>
+    <li class="nav-item"><%= link_to "Patients", patients_path, class: 'nav-link p-3 text-light' %></li>
+    <li class="nav-item"><%= link_to "Appointments", appointments_path, class: 'nav-link p-3 text-light' %></li>
+    <li class="nav-item"><%= link_to "Beds", beds_path, class: 'nav-link p-3 text-light' %></li>
+  </ul>
 </nav>
+</div>
