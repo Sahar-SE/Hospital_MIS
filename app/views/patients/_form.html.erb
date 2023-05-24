@@ -2,8 +2,7 @@
 <%= form_with(model: patient) do |form| %>
   <% if patient.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
-
+      <h2><%= pluralize(patient.errors.count, "error") %> Prohibited this patient from being saved:</h2>
       <ul>
         <% patient.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,54 +10,58 @@
       </ul>
     </div>
   <% end %>
+  <div class="bg-success p-5 row text-light shadow-dark">
+  <div class="col-md-6 col-sm-12">
+    <div class="form-group">
+      <%= form.label :name%>
+      <%= form.text_field :name , class: 'form-control'%>
+    </div>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <div class="form-group">
+      <%= form.label :email%>
+      <%= form.text_field :email, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :profile_image%>
+      <%= form.file_field :profile_image, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :documents%>
+      <%= form.file_field :documents, class: "form-control" %>
+    </div>
+  
+    <div class="form-group">
+      <%= form.label :disease%>
+      <%= form.text_field :disea, class: 'form-control' %>
+    </div>
   </div>
+  <div class="col-md-6 col-sm-12">
+    <div class="form-group">
+      <%= form.label :"Date Of Enterance"%>
+      <%= form.date_field :dof_enterance, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
+    <div>
+      <%= form.label :"Date Of Exit"%>
+      <%= form.date_field :dof_exit, class: 'form-control' %>
+    </div>
 
-   <div>
-    <%= form.label :profile_image, style: "display: block" %>
-    <%= form.file_field :profile_image %>
-  </div>
+    <div>
+      <%= form.label :address %>
+      <%= form.text_field :addre, class: 'form-control' %>
+    </div>
 
-   <div>
-    <%= form.label :documents, style: "display: block" %>
-    <%= form.file_field :documents %>
-  </div>
+    <div>
+      <%= form.label :phone %>
+      <%= form.text_field :phone, class: 'form-control'%>
+    </div>
 
-  <div>
-    <%= form.label :disease, style: "display: block" %>
-    <%= form.text_field :disease %>
-  </div>
-
-  <div>
-    <%= form.label :"Date Of Enterance", style: "display: block" %>
-    <%= form.date_field :dof_enterance %>
-  </div>
-
-  <div>
-    <%= form.label :"Date Of Exit", style: "display: block" %>
-    <%= form.date_field :dof_exit %>
-  </div>
-
-  <div>
-    <%= form.label :address, style: "display: block" %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <div class="btn btn-md btn-warning mt-4 col-12">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
+</div>
 </div>
