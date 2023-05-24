@@ -1,14 +1,21 @@
-<p style="color: green"><%= notice %></p>
+<p class="badge bg-success"><%= notice %></p>
 
-<h1>Patients</h1>
+<h1 class="text-center mt-4 text-success">Patients</h1>
 
-<div id="patients">
+<div id="patients" class="row">
+ <table class="table table-hover mt-5 col-6">
   <% @patients.each do |patient| %>
-    <%= render patient %>
-    <p>
-      <%= link_to "Show this patient", patient %>
-    </p>
-  <% end %>
-</div>
+    <tr>
+    <td><%= render patient %></td>
 
-<%= link_to "New patient", new_patient_path %>
+    <td><%= link_to "Update", edit_patient_path(patient), class: 'btn btn-warning' %></td>
+
+    <td><%= link_to "Details", patient, class: 'btn btn-primary' %></td>
+
+    <td><%= button_to "Delete", patient, method: :delete, class: 'btn btn-danger' %></td>
+    </tr>
+    
+  <% end %>
+  </table>
+</div>
+<div class="wrapper"><%= link_to "Register", new_patient_path, class: "btn btn-secondary" %></div>
