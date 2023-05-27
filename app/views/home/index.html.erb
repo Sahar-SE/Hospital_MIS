@@ -1,1 +1,147 @@
-<h1>Hospital Management System</h1>
+<main class="main">
+        
+        <section class="card-area">
+
+            <!-- Card: City -->
+            <section class="card-section">
+                <div class="card">
+                    <div class="flip-card">
+                        <div class="flip-card__container">
+                            <div class="card-front">
+                                <div class="card-front__tp card-front__tp--doctors">
+                                  <h2 class="card-front__heading">Available Doctors</h2>
+                                </div>
+
+                                <div class="card-front__bt">
+                                    <p class="card-front__text-view card-front__text-view--city">
+                                        View me
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-back">      
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inside-page">
+                        <div class="inside-page__container">
+                            <h3 class="inside-page__heading inside-page__heading--city">
+                                <%= @doctor_count %>
+                            </h3>
+                            <a href="#" class="inside-page__btn inside-page__btn--city">View Doctors</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card: Patients -->
+            <section class="card-section">
+                <div class="card">
+                    <div class="flip-card">
+                        <div class="flip-card__container">
+                            <div class="card-front">
+                                <div class="card-front__tp card-front__tp--patients">
+                                    <%# SVG %>
+                                    <h2 class="card-front__heading">Patients</h2>
+                                </div>
+
+                                <div class="card-front__bt">
+                                    <p class="card-front__text-view card-front__text-view--ski">
+                                        View me
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card-back"></div>
+                        </div>
+                    </div>
+
+                    <div class="inside-page">
+                        <div class="inside-page__container">
+                            <h3 class="inside-page__heading inside-page__heading--ski">
+                               <%= @patient_count %> 
+                            </h3>
+                            <a href="#" class="inside-page__btn inside-page__btn--ski">View deals</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card: Appointments -->
+            <section class="card-section">
+                <div class="card">
+                    <div class="flip-card">
+                        <div class="flip-card__container">
+                            <div class="card-front">
+                                <div class="card-front__tp card-front__tp--beach">
+                                    
+                               <%# svg %>
+                                               <h2 class="card-front__heading">
+                                                   Remaining Appointments
+                                               </h2>
+                                </div>
+
+                                <div class="card-front__bt">
+                                    <p class="card-front__text-view card-front__text-view--beach">
+                                        View me
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                    </div>
+
+                    <div class="inside-page">
+                        <div class="inside-page__container">
+                            <h3 class="inside-page__heading inside-page__heading--beach">
+                                <%= @appointment_count %>
+                            </h3>
+
+                            <a href="#" class="inside-page__btn inside-page__btn--beach">View deals</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card: Beds -->
+            <section class="card-section">
+                <div class="card">
+                    <div class="flip-card">
+                        <div class="flip-card__container">
+                            <div class="card-front">
+                                <div class="card-front__tp card-front__tp--camping">
+
+                                <%# SVG %>
+                                               <h2 class="card-front__heading">
+                                                   Total Beds
+                                               </h2>
+                                </div>
+
+                                <div class="card-front__bt">
+                                    <p class="card-front__text-view card-front__text-view--camping">
+                                        View me
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                    </div>
+
+                    <div class="inside-page">
+                        <div class="inside-page__container">
+                            <h3 class="inside-page__heading inside-page__heading--camping">
+                                <%= @bed_count %>
+                            </h3>
+
+                            <a href="#" class="inside-page__btn inside-page__btn--camping">View deals</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <footer class="footer">
+            <p class="footer-text">&copy; 2021 Created by Maza designDev</p>
+          </footer>
+    </main>
+</body>
+</html>
