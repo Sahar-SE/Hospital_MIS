@@ -4,6 +4,8 @@ class PatientsController < ApplicationController
   # GET /patients or /patients.json
   def index
     @patients = Patient.all
+    row_count = @patients.count
+    @row_count = row_count
   end
 
   # GET /patients/1 or /patients/1.json
