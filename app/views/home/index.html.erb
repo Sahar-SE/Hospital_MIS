@@ -75,13 +75,8 @@
                         <div class="flip-card__container">
                             <div class="card-front">
                                 <div class="card-front__tp card-front__tp--beach">
-                                    
-                               <%# svg %>
-                                               <h2 class="card-front__heading">
-                                                   Remaining Appointments
-                                               </h2>
+                                    <h2 class="card-front__heading">Remaining Appointments</h2>
                                 </div>
-
                                 <div class="card-front__bt">
                                     <p class="card-front__text-view card-front__text-view--beach">
                                         View me
@@ -97,8 +92,7 @@
                             <h3 class="inside-page__heading inside-page__heading--beach">
                                 <%= @appointment_count %>
                             </h3>
-
-                            <a href="#" class="inside-page__btn inside-page__btn--beach">View deals</a>
+                            <%= link_to "View Appointment", appointments_path, class: "inside-page__btn inside-page__btn--beach"%>
                         </div>
                     </div>
                 </div>
