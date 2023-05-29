@@ -1,144 +1,128 @@
 <main class="main">
-        <h1 class="wrapper display hospital"><strong>Hospital Management Information System</strong></h1>
-        <section class="card-area">
+  <h1 class="wrapper display hospital"><strong>Hospital Management Information System</strong></h1>
+    <section class="card-area">
 
-            <!-- Card: City -->
-            <section class="card-section">
-                <div class="card">
-                    <div class="flip-card">
-                        <div class="flip-card__container">
-                            <div class="card-front">
-                                <div class="card-front__tp card-front__tp--doctors">
-                                  <h2 class="card-front__heading">Available Doctors</h2>
-                                </div>
-
-                                <div class="card-front__bt">
-                                    <p class="card-front__text-view card-front__text-view--city">
-                                        View me
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-back">      
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="inside-page">
-                        <div class="inside-page__container">
-                            <h3 class="inside-page__heading inside-page__heading--city">
-                                <%= @doctor_count %>
-                            </h3>
-                            <a href="#" class="inside-page__btn inside-page__btn--city">View Doctors</a>
-                        </div>
-                    </div>
+      <!-- Card: doctors -->
+      <section class="card-section">
+        <div class="card">
+          <div class="flip-card">
+            <div class="flip-card__container">
+              <div class="card-front">
+                <div class="card-front__tp card-front__tp--doctors">
+                  <h2 class="card-front__heading">Available Doctors</h2>
                 </div>
-            </section>
 
-            <!-- Card: Patients -->
-            <section class="card-section">
-                <div class="card">
-                    <div class="flip-card">
-                        <div class="flip-card__container">
-                            <div class="card-front">
-                                <div class="card-front__tp card-front__tp--patients">
-                                    <%# SVG %>
-                                    <h2 class="card-front__heading">Patients</h2>
-                                </div>
-
-                                <div class="card-front__bt">
-                                    <p class="card-front__text-view card-front__text-view--ski">
-                                        View me
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="card-back"></div>
-                        </div>
-                    </div>
-
-                    <div class="inside-page">
-                        <div class="inside-page__container">
-                            <h3 class="inside-page__heading inside-page__heading--ski">
-                               <%= @patient_count %> 
-                            </h3>
-                            <a href="#" class="inside-page__btn inside-page__btn--ski">View deals</a>
-                        </div>
-                    </div>
+                <div class="card-front__bt">
+                  <p class="card-front__text-view card-front__text-view--doctors">
+                    View me
+                  </p>
                 </div>
-            </section>
+              </div>
+              <div class="card-back"></div>
+            </div>
+          </div>
 
-            <!-- Card: Appointments -->
-            <section class="card-section">
-                <div class="card">
-                    <div class="flip-card">
-                        <div class="flip-card__container">
-                            <div class="card-front">
-                                <div class="card-front__tp card-front__tp--beach">
-                                    
-                               <%# svg %>
-                                               <h2 class="card-front__heading">
-                                                   Remaining Appointments
-                                               </h2>
-                                </div>
+          <div class="inside-page">
+            <div class="inside-page__container">
+              <h3 class="inside-page__heading inside-page__heading--doctors">
+                <%= @doctor_count %>
+              </h3>
+              <a href="#" class=""></a>
+                <%= link_to "View Doctors", doctors_path, class: 'inside-page__btn inside-page__btn--doctors' %>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                                <div class="card-front__bt">
-                                    <p class="card-front__text-view card-front__text-view--beach">
-                                        View me
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-back"></div>
-                        </div>
-                    </div>
-
-                    <div class="inside-page">
-                        <div class="inside-page__container">
-                            <h3 class="inside-page__heading inside-page__heading--beach">
-                                <%= @appointment_count %>
-                            </h3>
-
-                            <a href="#" class="inside-page__btn inside-page__btn--beach">View deals</a>
-                        </div>
-                    </div>
+      <!-- Card: Patients -->
+      <section class="card-section">
+        <div class="card">
+          <div class="flip-card">
+            <div class="flip-card__container">
+              <div class="card-front">
+                <div class="card-front__tp card-front__tp--patients">
+                  <h2 class="card-front__heading">Patients</h2>
                 </div>
-            </section>
-
-            <!-- Card: Beds -->
-            <section class="card-section">
-                <div class="card">
-                    <div class="flip-card">
-                        <div class="flip-card__container">
-                            <div class="card-front">
-                                <div class="card-front__tp card-front__tp--camping">
-
-                                <%# SVG %>
-                                               <h2 class="card-front__heading">
-                                                   Total Beds
-                                               </h2>
-                                </div>
-
-                                <div class="card-front__bt">
-                                    <p class="card-front__text-view card-front__text-view--camping">
-                                        View me
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-back"></div>
-                        </div>
-                    </div>
-
-                    <div class="inside-page">
-                        <div class="inside-page__container">
-                            <h3 class="inside-page__heading inside-page__heading--camping">
-                                <%= @bed_count %>
-                            </h3>
-
-                            <a href="#" class="inside-page__btn inside-page__btn--camping">View deals</a>
-                        </div>
-                    </div>
+                <div class="card-front__bt">
+                  <p class="card-front__text-view card-front__text-view--patients">
+                    View me
+                  </p>
                 </div>
-            </section>
+              </div>
+
+              <div class="card-back"></div></div>
+            </div>
+
+            <div class="inside-page">
+              <div class="inside-page__container">
+                <h3 class="inside-page__heading inside-page__heading--patients">
+                  <%= @patient_count %> 
+                </h3>
+                  <%= link_to "View Patients", patients_path, class: 'inside-page__btn inside-page__btn--patients'%>
+              </div>
+            </div>
+          </div>
         </section>
-    </main>
-</body>
-</html>
+
+        <!-- Card: Appointments -->
+        <section class="card-section">
+          <div class="card">
+            <div class="flip-card">
+              <div class="flip-card__container">
+                <div class="card-front">
+                  <div class="card-front__tp card-front__tp--appointments">
+                    <h2 class="card-front__heading">Appointments</h2>
+                  </div>
+                  <div class="card-front__bt">
+                    <p class="card-front__text-view card-front__text-view--appointments">
+                      View me
+                    </p>
+                  </div>
+                </div>
+              <div class="card-back"></div>
+            </div>
+          </div>
+
+          <div class="inside-page">
+            <div class="inside-page__container">
+              <h3 class="inside-page__heading inside-page__heading--appointments">
+                <%= @appointment_count %>
+              </h3>
+                <%= link_to "Appointment", appointments_path, class: "inside-page__btn inside-page__btn--appointments"%>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card: Beds -->
+      <section class="card-section">
+        <div class="card">
+          <div class="flip-card">
+            <div class="flip-card__container">
+              <div class="card-front">
+                <div class="card-front__tp card-front__tp--beds">
+                  <h2 class="card-front__heading">Total Beds</h2>
+                </div>
+
+                <div class="card-front__bt">
+                  <p class="card-front__text-view card-front__text-view--beds">
+                    View me
+                  </p>
+                </div>
+              </div>
+              <div class="card-back"></div>
+            </div>
+          </div>
+
+          <div class="inside-page">
+            <div class="inside-page__container">
+              <h3 class="inside-page__heading inside-page__heading--beds">
+                <%= @bed_count %>
+              </h3>
+                <%= link_to "View Beds", beds_path, class: 'inside-page__btn inside-page__btn--beds'%>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>

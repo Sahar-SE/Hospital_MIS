@@ -1,7 +1,6 @@
 <p class="badge bg-success"><%= notice %></p>
 
-<h1 class="text-center mt-4 text-success">Patients</h1>
-<p>The number of rows in the users table is <%= @row_count %>.</p>
+<h1 class="text-center mt-4 wrapper display hospital"><strong>Patients</strong></h1>
 
 <div id="patients" class="row">
  <table class="table table-hover mt-5 col-6">
@@ -19,4 +18,4 @@
   <% end %>
   </table>
 </div>
-<div class="wrapper"><%= link_to "Register", new_patient_path, class: "btn btn-secondary" %></div>
+<div class="wrapper"><%= link_to "Register", new_patient_path, class: "btn btn-secondary mb-3" %></div>
