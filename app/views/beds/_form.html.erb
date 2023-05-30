@@ -3,5 +3,10 @@
   <% if bed.errors.any %>
     <div style="color: red">
       <h2><%= pluralize(bed.errors.count, "error") %> prohibited this bed from being saved:</h2>
+      <ul>
+        <% bed.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
       
 <% end %>
