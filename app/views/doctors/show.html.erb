@@ -1,14 +1,13 @@
-  <h1>This is Doctors Page</h1>
 <p style="color: green"><%= notice %></p>
 
 <div id="doctors">
  <div class="row">
   <div class="col-7 p-5">
-    <h2 class="display-1">
+    <h2 class="display-1 hospital">
       <strong><%= @doctor.name %></strong>
     </h2>
 
-    <p class="bg-dark text-light p-5">
+    <p class="bg-success rounded text-light p-5">
       <strong>Bio:</strong>
       <%= @doctor.bio %>
     </p>
@@ -49,6 +48,3 @@
   <%= link_to "Back", doctors_path,  class: 'btn btn-small btn-warning m-2' %>
   <%= button_to "Delete", @doctor, method: :delete, class: 'btn btn-small btn-danger m-2' %>  
 </div>
-<div class="wrapper p-body person">
-    Magic person
-  </div>
