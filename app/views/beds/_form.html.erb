@@ -2,6 +2,6 @@
 <%= form_with (model: "bed") do |form| %>
   <% if bed.errors.any %>
     <div style="color: red">
-      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this bed from being saved:</h2>
-
+      <h2><%= pluralize(bed.errors.count, "error") %> prohibited this bed from being saved:</h2>
+      
 <% end %>
