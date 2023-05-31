@@ -1,9 +1,7 @@
-<h1>New patient</h1>
+<div class="mt-5">
+  <%= render "form", patient: @patient %>
+</div>
 
-<%= render "form", patient: @patient %>
-
-<br>
-
-<div>
-  <%= link_to "Back to patients", patients_path %>
+<div class="wrapper mt-4">
+  <%= link_to "Cancel", patients_path, class: 'btn btn-small btn-danger mb-3' %>
 </div>

@@ -1,8 +1,10 @@
+
 <div class="wrapper">
-<%= form_with (model: "bed") do |form| %>
-  <% if bed.errors.any %>
+<%= form_with(model: bed) do |form| %>
+  <% if bed.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(bed.errors.count, "error") %> prohibited this bed from being saved:</h2>
+
       <ul>
         <% bed.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,4 +12,27 @@
       </ul>
     </div>
   <% end %>
-  
+
+<div class="bg-success p-5 row text-light">
+    <div>
+      <%= form.label :"Patient"%>
+      <%= form.text_field :p_name, class: 'form-control'%>
+    </div>
+    <div>
+      <%= form.label :"Number" %>
+      <%= form.text_field :number, class: 'form-control' %>
+    </div>
+
+    <div>
+      <%= form.label :"Reserve" %>
+      <%= form.text_field :is_reserved, class: 'form_control' %>
+
+    </div>
+
+    <div  class="btn btn-warning mt-4 col-4 offset-4">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  </div>
+</div>
+</div>

@@ -4,8 +4,6 @@ class PatientsController < ApplicationController
   # GET /patients or /patients.json
   def index
     @patients = Patient.all
-    row_count = @patients.count
-    @row_count = row_count
   end
 
   # GET /patients/1 or /patients/1.json
@@ -67,6 +65,6 @@ class PatientsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def patient_params
-      params.require(:patient).permit(:name, :email, :disease, :dof_enterance, :dof_exit, :address, :phone)
+     params. require(:patient).permit(:name, :email, :disease, :dof_enterance, :dof_exit, :address, :phone)
     end
 end

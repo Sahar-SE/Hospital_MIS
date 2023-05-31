@@ -13,24 +13,25 @@
   <% end %>
 
 <div class="bg-success p-5 row text-light">
-    <div>
-      <%= form.label :"Patient Name" %>
-      <%= form.text_field :p_name, class: 'form-control' %>
-    </div>
+  <div>
+    <%= form.label :name%>
+    <%= form.text_field :p_name , class: 'form-control'%>
+  </div>
 
-    <div>
-      <%= form.label :"Doctor Name" %>
-      <%= form.text_field :d_name, class: 'form-control' %>
-    </div>
+  <div>
+    <%= form.label :"Doctor Name" %>
+    <%= form.text_field :d_name, class: 'form-control' %>
+  </div>
 
-    <div>
-      <%= form.label :"Appointment Date" %>
-      <%= form.date_field :app_date, class: 'form-control' %>
-    </div>
+  <div>
+    <%= form.label :"Appointment Date" %>
+    <%= form.date_field :app_date, class: 'form-control' %>
+  </div>
 
-    <div  class="btn btn-warning mt-4 col-4 offset-4">
-      <%= form.submit %>
-    </div>
+
+  <div class="btn btn-warning mt-4 col-4 offset-4">
+    <%= form.submit %>
+  </div>
   <% end %>
   </div>
 </div>
