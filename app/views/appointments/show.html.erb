@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center mt-4 text-success hospital"><strong>Appointments</strong></h1>
+
+<div id="appointments">
+ <table class="table table-hover mt-5 col-6">
+    <tr>
+      <th>Patient Name</th>
+      <th>Doctor Name</th>
+      <th>Appointment Date</th>
+    <tr>
+    <tr>
+   <% @appointments.each do |appointment| %>
+       <%= render appointment %>
+       <td><%= link_to "Update", edit_appointment_path(appointment), class: 'btn btn-warning' %></td>
+       <td><%= button_to "Cancel", appointment, method: :delete, class: 'btn btn-danger' %></td>
+     <tr>
+  <% end %>
+ </table>
+</div>
+
+<div class="wrapper"><%= link_to "New appointment", new_appointment_path, class: "btn btn-secondary mb-3" %></div>
