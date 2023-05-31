@@ -8,6 +8,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1 or /appointments/1.json
   def show
+    @appointments = Appointment.all
   end
 
   # GET /appointments/new
