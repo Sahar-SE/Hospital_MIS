@@ -1,9 +1,7 @@
 <p class="badge bg-success"><%= notice %></p>
 
-<div>
+<div class="wrapper">
   <div id="patients">
-    <div class="row">
-      <div class="col-7 p-5">
         <h2 class="display-1 hospital">
           <strong><%= @patient.name %></strong>
         </h2>
@@ -23,23 +21,20 @@
           <strong>Date Of Exit:</strong>
           <%= @patient.dof_exit %>
         </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= @patient.address %>
-  </p>
-
-  <p>
-    <strong>Phone:</strong>
-    <%= @patient.phone %>
-  </p>
-
-  <p>
-    <strong>Documents:</strong>
-    <%= @patient.documents %>
-  </p>
-
+        <p>
+          <strong>Address:</strong>
+          <%= @patient.address %>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <%= @patient.phone %>
+        </p>
+        <p>
+          <strong>Documents:</strong>
+          <%= @patient.documents %>
+        </p>
   </div>
+</div>
 
   <%= link_to "Edit", edit_patient_path(@patient) %> |
   <%= link_to "Back", patients_path %>
