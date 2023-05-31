@@ -38,9 +38,9 @@
     </div>
   </div>
 </div>
+<div class="wrapper">
+  <%= link_to "Edit", edit_patient_path(@patient), class: 'btn btn-small btn-primary m-4' %>
+  <%= link_to "Back", patients_path, class: 'btn btn-small btn-warning m-4' %>
+  <%= button_to "Delete", @patient, method: :delete, class: 'btn btn-small btn-danger m-4' %>
 
-  <%= link_to "Edit", edit_patient_path(@patient) %> |
-  <%= link_to "Back", patients_path %>
-  <%= button_to "Delete", @patient, method: :delete %>
-  
 </div>
