@@ -2,44 +2,45 @@
 
 <div class="wrapper">
   <div id="patients">
-        <h2 class="display-1 hospital">
+  <div class="patient">
+        <h2 class="display-1 hospital pb-2">
           <strong><%= @patient.name %></strong>
         </h2>
-    <div class="patient">
+    
         <p>
-          <strong>Email:</strong>
-          <%= @patient.email %>
+          <strong>Email:
+          <%= @patient.email %></strong>
         </p>
         <p>
-          <strong>Disease:</strong>
-          <%= @patient.disease %>
+          <strong>Disease:
+          <%= @patient.disease %></strong>
         </p>
         <p>
-          <strong>Date of Enterance:</strong>
-          <%= @patient.dof_enterance %>
+          <strong>Date of Enterance:
+          <%= @patient.dof_enterance %></strong>
         </p>
         <p>
-          <strong>Date Of Exit:</strong>
-          <%= @patient.dof_exit %>
+          <strong>Date Of Exit:
+          <%= @patient.dof_exit %></strong>
         </p>
         <p>
-          <strong>Address:</strong>
-          <%= @patient.address %>
+          <strong>Address:
+          <%= @patient.address %></strong>
         </p>
         <p>
-          <strong>Phone:</strong>
-          <%= @patient.phone %>
+          <strong>Phone:
+          <%= @patient.phone %></strong>
         </p>
         <p>
-          <strong>Documents:</strong>
-          <%= @patient.documents %>
+          <strong>Documents:
+          <%= @patient.documents %></strong>
         </p>
     </div>
   </div>
 </div>
+<div class="wrapper">
+  <%= link_to "Edit", edit_patient_path(@patient), class: 'btn btn-small btn-primary m-4' %>
+  <%= link_to "Back", patients_path, class: 'btn btn-small btn-warning m-4' %>
+  <%= button_to "Delete", @patient, method: :delete, class: 'btn btn-small btn-danger m-4' %>
 
-  <%= link_to "Edit", edit_patient_path(@patient) %> |
-  <%= link_to "Back", patients_path %>
-  <%= button_to "Delete", @patient, method: :delete %>
-  
 </div>
