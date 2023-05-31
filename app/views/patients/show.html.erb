@@ -8,10 +8,6 @@
           <strong><%= @patient.name %></strong>
         </h2>
 
-  <% if @patient.profile_image.attached? %>
-  <%= image_tag @patient.profile_image, style: "width: 40px" %>
-  <% end %>
-
   <p>
     <strong>Email:</strong>
     <%= @patient.email %>
