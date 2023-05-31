@@ -1,55 +1,45 @@
 <p class="badge bg-success"><%= notice %></p>
 
-<div>
-<div id="patients">
-  <p>
-    <strong>Name:</strong>
-    <%= @patient.name %>
-  </p>
-
-  <% if @patient.profile_image.attached? %>
-  <%= image_tag @patient.profile_image, style: "width: 40px" %>
-  <% end %>
-
-  <p>
-    <strong>Email:</strong>
-    <%= @patient.email %>
-  </p>
-
-  <p>
-    <strong>Disease:</strong>
-    <%= @patient.disease %>
-  </p>
-
-  <p>
-    <strong>Date of Enterance:</strong>
-    <%= @patient.dof_enterance %>
-  </p>
-
-  <p>
-    <strong>Date Of Exit:</strong>
-    <%= @patient.dof_exit %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= @patient.address %>
-  </p>
-
-  <p>
-    <strong>Phone:</strong>
-    <%= @patient.phone %>
-  </p>
-
-  <p>
-    <strong>Documents:</strong>
-    <%= @patient.documents %>
-  </p>
-
+<div class="wrapper">
+  <div id="patients">
+        <h2 class="display-1 hospital">
+          <strong><%= @patient.name %></strong>
+        </h2>
+    <div class="patient">
+        <p>
+          <strong>Email:</strong>
+          <%= @patient.email %>
+        </p>
+        <p>
+          <strong>Disease:</strong>
+          <%= @patient.disease %>
+        </p>
+        <p>
+          <strong>Date of Enterance:</strong>
+          <%= @patient.dof_enterance %>
+        </p>
+        <p>
+          <strong>Date Of Exit:</strong>
+          <%= @patient.dof_exit %>
+        </p>
+        <p>
+          <strong>Address:</strong>
+          <%= @patient.address %>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <%= @patient.phone %>
+        </p>
+        <p>
+          <strong>Documents:</strong>
+          <%= @patient.documents %>
+        </p>
+    </div>
   </div>
+</div>
 
-  <%= link_to "Edit this patient", edit_patient_path(@patient) %> |
-  <%= link_to "Back to patients", patients_path %>
-  <%= button_to "Destroy this patient", @patient, method: :delete %>
+  <%= link_to "Edit", edit_patient_path(@patient) %> |
+  <%= link_to "Back", patients_path %>
+  <%= button_to "Delete", @patient, method: :delete %>
   
 </div>
