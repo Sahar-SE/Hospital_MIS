@@ -11,21 +11,18 @@
           <strong>Email:</strong>
           <%= @patient.email %>
         </p>
-
-  <p>
-    <strong>Disease:</strong>
-    <%= @patient.disease %>
-  </p>
-
-  <p>
-    <strong>Date of Enterance:</strong>
-    <%= @patient.dof_enterance %>
-  </p>
-
-  <p>
-    <strong>Date Of Exit:</strong>
-    <%= @patient.dof_exit %>
-  </p>
+        <p>
+          <strong>Disease:</strong>
+          <%= @patient.disease %>
+        </p>
+        <p>
+          <strong>Date of Enterance:</strong>
+          <%= @patient.dof_enterance %>
+        </p>
+        <p>
+          <strong>Date Of Exit:</strong>
+          <%= @patient.dof_exit %>
+        </p>
 
   <p>
     <strong>Address:</strong>
@@ -44,8 +41,8 @@
 
   </div>
 
-  <%= link_to "Edit this patient", edit_patient_path(@patient) %> |
-  <%= link_to "Back to patients", patients_path %>
-  <%= button_to "Destroy this patient", @patient, method: :delete %>
+  <%= link_to "Edit", edit_patient_path(@patient) %> |
+  <%= link_to "Back", patients_path %>
+  <%= button_to "Delete", @patient, method: :delete %>
   
 </div>
