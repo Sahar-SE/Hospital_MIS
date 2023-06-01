@@ -1,7 +1,7 @@
 <div class="mt-5">
   <%= render "form", patient: @patient %>
 </div>
-<div>
+<div class="wrapper mt-4 mb-4">
   <%= link_to "Details", @patient, class: 'btn btn-small btn-primary m-2'  %>
-  <%= link_to "Back", patients_path %>
+  <%= link_to "Back", patients_path, class: "btn btn-danger btn-small m-2"  %>
 </div>
