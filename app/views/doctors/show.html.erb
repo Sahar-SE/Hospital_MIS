@@ -7,12 +7,12 @@
       <strong><%= @doctor.name %></strong>
     </h2>
 
-    <p class="bg-success rounded text-light p-5">
+    <p class="bg-success rounded text-light p-5 shadow-lg">
       <strong>Bio:</strong>
       <%= @doctor.bio %>
     </p>
 
-    <p class="badge badge-primary p-2">
+    <p class="badge bg-primary p-2">
       <strong>Speciality:</strong>
       <%= @doctor.speciality %>
     </p>
@@ -33,18 +33,19 @@
     </p>
       </div>
   <div class="col-5 flex justify-content-center p-5">
+  <div>
   <% if @doctor.profile_image.attached? %>
-    <%= image_tag @doctor.profile_image, style: 'width:400px; height:400px', class:'rounded-circle' %>
-    <p>
-      <strong>Resume:</strong>
-      <%= @doctor.documents %>
-    </p>
+    <%= image_tag @doctor.profile_image, style: 'width:400px; height:400px', class:'rounded-circle shadow-lg' %>
   <% end %>
+  </div>
+  <div class="wrapper mt-2">
+    <%= link_to "Edit", edit_doctor_path(@doctor), class: 'btn btn-small btn-primary m-2' %>
+  <%= link_to "Back", doctors_path,  class: 'btn btn-small btn-warning m-2' %>
+  <%= button_to "Delete", @doctor, method: :delete, class: 'btn btn-small btn-danger m-2' %>
+  </div>
   </div>
   </div>
 </div>
 <div class="wrapper">
-  <%= link_to "Edit", edit_doctor_path(@doctor), class: 'btn btn-small btn-primary m-2' %>
-  <%= link_to "Back", doctors_path,  class: 'btn btn-small btn-warning m-2' %>
-  <%= button_to "Delete", @doctor, method: :delete, class: 'btn btn-small btn-danger m-2' %>  
+ 
 </div>
