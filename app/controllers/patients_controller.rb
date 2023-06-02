@@ -8,7 +8,6 @@ class PatientsController < ApplicationController
 
   # GET /patients/1 or /patients/1.json
   def show
-    @patients = Patient.all
   end
 
   # GET /patients/new
