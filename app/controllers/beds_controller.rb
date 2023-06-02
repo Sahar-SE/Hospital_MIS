@@ -64,6 +64,6 @@ private
 
 # Only allow a list of trusted parameters through.
   def bed_params
-    params.require(:bed).permit(:number, :is_reseved)
+    params.require(:bed).permit(:p_name, :number, :is_reseved)
   end
 end
