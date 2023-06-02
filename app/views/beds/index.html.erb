@@ -6,7 +6,6 @@
   <% @beds.each do |bed| %>
     <%= render bed %>
     <%= link_to "Update", edit_bed_path(bed), class: 'btn btn-warning' %>
-      <%# <%= link_to "Back", beds_path %> %>
       <%= button_to "Delete", bed, method: :delete %>
   <% end %>
 </div>
