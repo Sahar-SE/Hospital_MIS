@@ -8,6 +8,7 @@ class BedsController < ApplicationController
 
   # GET /beds/1 or /beds/1.json
   def show
+    @beds = Bed.all
   end
 
   # GET /beds/new
@@ -64,6 +65,6 @@ private
 
 # Only allow a list of trusted parameters through.
   def bed_params
-    params.require(:bed).permit(:number, :is_reseved)
+    params.require(:bed).permit(:p_name, :number, :is_reseved)
   end
 end

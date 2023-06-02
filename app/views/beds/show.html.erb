@@ -1,11 +1,19 @@
+<div class="wrapper">
 <p style="color: green"><%= notice %></p>
+<table style="width: 80%" class="table table-hover mt-5">
+  <tr>
+    <th>Patient</th>
+    <th>Number</th>
+    <th>Is reseved</th>
+  </tr>
+   <% @beds.each do |bed| %>
+       <%= render bed %>
+       <td><%= link_to "Update", edit_bed_path(bed), class: 'btn btn-warning' %></td>
+       <td><%= button_to "Cancel", bed, method: :delete, class: 'btn btn-danger' %></td>
+     </tr>
+  <% end %>
+ </table>
+</div>
 
-<%# <%= render @bed %>
-
-<div>
-  <h1>Beds Page</h1>
-  <%# <%= link_to "Edit this bed", edit_bed_path(@bed) |  %>
-  <%= link_to "Back to beds", beds_path %>
-
-  <%= button_to "Destroy this bed", @bed, method: :delete %>
+<div class="wrapper"><%= link_to "New bed", new_bed_path, class: "btn btn-secondary mb-3" %></div>
 </div>
