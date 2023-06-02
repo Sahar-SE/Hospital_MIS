@@ -1,10 +1,15 @@
 <p style="color: green"><%= notice %></p>
-
+<table>
+  <th>
+    <strong>Patient Name</strong>
+    <strong>Number</strong>
+    <strong>Is reseved</strong>
+  </th>
    <% @beds.each do |bed| %>
        <%= render bed %>
        <td><%= link_to "Update", edit_bed_path(bed), class: 'btn btn-warning' %></td>
        <td><%= button_to "Cancel", bed, method: :delete, class: 'btn btn-danger' %></td>
-     <tr>
+     </tr>
   <% end %>
  </table>
 </div>
