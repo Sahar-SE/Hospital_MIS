@@ -8,6 +8,7 @@ class BedsController < ApplicationController
 
   # GET /beds/1 or /beds/1.json
   def show
+    @beds = Bed.all
   end
 
   # GET /beds/new
