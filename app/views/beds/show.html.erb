@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
-<table>
-  <th>
-    <strong>Patient Name</strong>
-    <strong>Number</strong>
-    <strong>Is reseved</strong>
-  </th>
+<table class="table table-hover mt-5 col-6">
+  <tr>
+    <th>Patient</th>
+    <th>Number</th>
+    <th>Is reseved</th>
+  </tr>
    <% @beds.each do |bed| %>
        <%= render bed %>
        <td><%= link_to "Update", edit_bed_path(bed), class: 'btn btn-warning' %></td>
