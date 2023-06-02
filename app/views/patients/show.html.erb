@@ -1,3 +1,47 @@
+<style>
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.patient {
+  background: linear-gradient(to bottom, #ebef06, #ffb338);
+  padding: 30px;
+  margin-top: 40px;
+  border: 1px white solid;
+  border-radius: 0 50px 0 50px;
+  box-shadow: 0 10px 15px #b1b1b1;
+}
+
+.patient:hover {
+  color: white;
+  box-shadow: 0 20px 30px 0#989898;
+}
+
+.hospital {
+  background: linear-gradient(
+    to bottom,
+    #7afd6e,
+    #0b4527
+   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: -100%;
+  }
+  to {
+    margin-top: 0%;
+  }
+}
+</style>
 <p class="badge bg-success"><%= notice %></p>
 
 <div class="row">
