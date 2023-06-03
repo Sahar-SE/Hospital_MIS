@@ -6,4 +6,5 @@ class Patient < ApplicationRecord
     # belongs_to :doctor
 
     validates :p_name, presence: true
+    validates :email, presence: true
 end
