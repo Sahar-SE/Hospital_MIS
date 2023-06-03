@@ -2,4 +2,9 @@ class Doctor < ApplicationRecord
     has_many :patients
     has_many :appointments
     has_one_attached :profile_image
+
+    validates :name, presence: true
+    validates :email, presence: true
+    validates :spaciality, presence: true
+    
 end
