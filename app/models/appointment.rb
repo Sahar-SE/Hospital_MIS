@@ -4,5 +4,6 @@ class Appointment < ApplicationRecord
 
     validates :p_name, presence: true
     validates :d_name, presence: true
-    
+    validates :app_date, presence: true
+
 end
