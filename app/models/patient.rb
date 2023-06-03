@@ -7,4 +7,5 @@ class Patient < ApplicationRecord
 
     validates :p_name, presence: true
     validates :email, presence: true
+    validates :phone, numericality: { only_numeric: true }
 end
