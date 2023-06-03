@@ -12,5 +12,5 @@ class Doctor < ApplicationRecord
     validates :bio, length: { minimum: 200, maximum: 1000 }
     validates :email, 
     format: { with: /\A(.+)@(.+)\z/, message: "Email invalid"  }, 
-    uniqueness: { case_sensitive: false }   
+    uniqueness: { case_sensitive: false }  
 end
