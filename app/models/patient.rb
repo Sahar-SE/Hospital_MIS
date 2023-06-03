@@ -5,12 +5,13 @@ class Patient < ApplicationRecord
     # has_one :Appointment
     # belongs_to :doctor
 
-    validates :p_name, presence: true
+    validates :name, presence: true
     validates :email, presence: true
-    validates :addre, presence: true
+    validates :address, presence: true
+    validates :disease, presence: true
     validates :dof_enterance, presence: true
     validates :phone, numericality: { only_numeric: true }
     validates :email, 
-    format: { with: /\A(.+)@(.+)\z/, message: "Email invalid"  }, 
+    format: { with: /\A(.+)@(.+)\z/, message: "invalid"  }, 
     uniqueness: { case_sensitive: false }
 end
