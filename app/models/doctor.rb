@@ -5,6 +5,7 @@ class Doctor < ApplicationRecord
 
     validates :name, presence: true
     validates :profile_image, presence: true
+    validates :address, presence: true
     validates :email, presence: true
     validates :speciality, presence: true
     validates :phone, numericality: { only_numeric: true }

@@ -7,4 +7,9 @@ class Patient < ApplicationRecord
 
     validates :p_name, presence: true
     validates :email, presence: true
+    validates :addre, presence: true
+    validates :phone, numericality: { only_numeric: true }
+    validates :email, 
+    format: { with: /\A(.+)@(.+)\z/, message: "Email invalid"  }, 
+    uniqueness: { case_sensitive: false }
 end
