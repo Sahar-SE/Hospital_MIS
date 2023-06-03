@@ -5,6 +5,9 @@ class Doctor < ApplicationRecord
 
     validates :name, presence: true
     validates :email, presence: true
-    validates :spaciality, presence: true
+    validates :speciality, presence: true
+    validates :phone, numericality: { only_numeric: true }
+    validates :bio, length: { minimum: 200, maximum: 1000 }
+
     
 end
