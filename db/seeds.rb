@@ -4,15 +4,19 @@
 # Examples:
 #
 
-doctors = Doctor.create(
-   name: "Ahmad Ahmadi",
-   bio: "I'm Ahmad Ahmadi graduated from Cairo University. has 3 years of experience at the hospital. I'm a cardiologist",
-   speciality: "Cardiology",
-   address: "Cairo, Egypt",
-   phone: 123456789
-)
+8.times do
+  doctors = Doctor.create(
+    name: "Ahmad Ahmadi",
+    bio: "I'm Ahmad Ahmadi graduated from Cairo University. has 3 years of experience at the hospital. I'm a cardiologist",
+    speciality: "Cardiology",
+    address: "Cairo, Egypt",
+    phone: 123456789
+  )
+end
 
+puts "Seeded 20 doctors"
 
+6.times do
 patients = Patient.create(
    name: "Mohamed Mohamedi",
    disease: "Cancer",
@@ -22,6 +26,10 @@ patients = Patient.create(
    phone: 123456778,
    # bed: 1
 )
+end
+
+puts "Seeded 20 patients"
+
 
 beds = Bed.create(
    number: 3,
@@ -30,9 +38,6 @@ beds = Bed.create(
 
 appointments = Appointment.create(
    app_date: "2023-03-01",
-   time: "10:00",
-   #doctor_id: 1,
-   #patient_id: 1
    p_name: "Mohamed Mohamedi",
    d_name: "Ahmad Ahmadi"
 )
