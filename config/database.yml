@@ -88,4 +88,5 @@ production:
   <<: *default
   database: Hospital_MIS_production
   username: Hospital_MIS
+  url: <%= ENV["DATABASE_URL"] %>
   password: <%= ENV["HOSPITAL_MIS_DATABASE_PASSWORD"] %>
