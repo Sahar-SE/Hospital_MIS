@@ -4,7 +4,7 @@
 # Examples:
 #
 
-8.times do
+7.times do
   doctors = Doctor.create(
     name: "Ahmad Ahmadi",
     bio: "I'm Ahmad Ahmadi graduated from Cairo University. has 3 years of experience at the hospital. I'm a cardiologist",
@@ -13,7 +13,6 @@
     phone: 123456789
   )
 end
-
 puts "Seeded 20 doctors"
 
 6.times do
@@ -27,15 +26,17 @@ patients = Patient.create(
    # bed: 1
 )
 end
-
 puts "Seeded 20 patients"
 
-
+7.times do
 beds = Bed.create(
    number: 3,
    is_reseved: false
 )
+end
+puts "Seeded 20 beds"
 
+9.times do
 appointments = Appointment.create(
    app_date: "2023-03-01",
    p_name: "Mohamed Mohamedi",
