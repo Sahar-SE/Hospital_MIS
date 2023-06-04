@@ -13,7 +13,7 @@
     phone: 123456789
   )
 end
-puts "Seeded 20 doctors"
+puts "Seeded 7 doctors"
 
 6.times do
 patients = Patient.create(
@@ -26,7 +26,7 @@ patients = Patient.create(
    # bed: 1
 )
 end
-puts "Seeded 20 patients"
+puts "Seeded 6 patients"
 
 7.times do
 beds = Bed.create(
@@ -34,7 +34,7 @@ beds = Bed.create(
    is_reseved: false
 )
 end
-puts "Seeded 20 beds"
+puts "Seeded 7 beds"
 
 9.times do
 appointments = Appointment.create(
@@ -42,5 +42,6 @@ appointments = Appointment.create(
    p_name: "Mohamed Mohamedi",
    d_name: "Ahmad Ahmadi"
 )
-
+end
+puts "Seeded 9 appointments"
 
