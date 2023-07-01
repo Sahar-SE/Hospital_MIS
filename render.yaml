@@ -1,0 +1,23 @@
+   services:
+     - type: web
+       name: Hospital_MIS
+       env: ruby
+       region: frankfurt # or oregon
+       plan: starter
+       numInstances: 1
+       buildCommand: ./bin/render-build.sh
+       startCommand: bundle exec puma -C config/puma.rb
+       domains:
+         - example.com # replace with your domain name
+       envVars:
+         - key: DATABASE_URL
+           fromDatabase:
+             name: Hospital_MIS_development
+             property: connectionString
+         - key: RAILS_MASTER_KEY
+           sync: false
+
+   databases:
+     - name: Hospital_MIS_development
+       plan: starter
+       region: frankfurt # or oregon
