@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/Hospital_MIS.git" }
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
@@ -46,6 +46,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'webpacker', '~> 5.0'
+
+gem 'bootstrap'
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"
